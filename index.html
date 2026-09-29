@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1720" />
+  <meta name="description" content="2026–2028 极地、海洋、申请、证书、签证与旅行总控台" />
+  <title>My Stuff · Expedition & Study Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="hero">
+    <nav class="topbar">
+      <a class="brand" href="#top">MY STUFF</a>
+      <div class="topbar-right">
+        <span class="updated">LAST UPDATE · 29 SEP 2026</span>
+        <a class="ghost-link" href="https://github.com/5dxxxhykrq-hash/my-stuff" target="_blank" rel="noreferrer">GITHUB ↗</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid" id="top">
+      <div>
+        <p class="eyebrow">2026 → 2028 / FIELD · OCEAN · POLAR</p>
+        <h1>把所有计划放进<br><span>同一条时间线。</span></h1>
+        <p class="intro">UCL 学年之外，统一管理极地课程、海洋研究、硕士申请、船司履历、签证、证书与两段假期旅行。</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">CURRENT FOCUS</div>
+        <div class="focus-row"><span class="focus-no">01</span><div><b>挪威申根 + 船位</b><small>12 月行程的硬前置</small></div></div>
+        <div class="focus-row"><span class="focus-no">02</span><div><b>RYA Powerboat Level 2</b><small>极地船司能力链起点</small></div></div>
+        <div class="focus-row"><span class="focus-no">03</span><div><b>UCT eligibility 确认</b><small>决定 2028 申请是否投入</small></div></div>
+      </div>
+    </div>
+
+    <div class="metrics" id="metrics"></div>
+  </header>
+
+  <main>
+    <section class="section urgent-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">NEXT 90 DAYS</p>
+          <h2>现在先处理什么</h2>
+        </div>
+        <button id="copyActions" class="small-button">复制近期行动</button>
+      </div>
+      <div id="urgentList" class="urgent-list"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MASTER TIMELINE</p>
+          <h2>2026–2028 时间轴</h2>
+        </div>
+        <p class="section-note">按“必须先做 → 等待开放 → 正式申请/出发”排列</p>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head projects-head">
+        <div>
+          <p class="eyebrow">PROJECT CONTROL</p>
+          <h2>全部项目</h2>
+        </div>
+        <div class="filters" id="filters"></div>
+      </div>
+
+      <div class="search-row">
+        <input id="searchInput" type="search" placeholder="搜索项目、机构、下一步…" />
+        <label class="toggle">
+          <input id="urgentOnly" type="checkbox" />
+          <span>只看 P0 / P1</span>
+        </label>
+      </div>
+
+      <div id="projects" class="project-grid"></div>
+    </section>
+
+    <section class="section dependency-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">DEPENDENCIES</p>
+          <h2>前后级关系</h2>
+        </div>
+      </div>
+      <div class="dependency-grid">
+        <div class="dependency-chain"><span>RYA PB2</span><i>→</i><span>小艇 / Zodiac 能力</span><i>→</i><span>极地船司</span></div>
+        <div class="dependency-chain"><span>UNSAM / UMAG</span><i>→</i><span>南极知识</span><i>→</i><span>Peace Boat / Expedition</span></div>
+        <div class="dependency-chain"><span>挪威鲸类帆船</span><i>→</i><span>Húsavík</span><i>→</i><span>海洋哺乳动物方向</span></div>
+        <div class="dependency-chain"><span>Húsavík + 非洲田野</span><i>→</i><span>Conservation evidence</span><i>→</i><span>UCT 2028</span></div>
+        <div class="dependency-chain"><span>UCL MSc 完成</span><i>→</i><span>时间释放</span><i>→</i><span>UW / 长期船期</span></div>
+        <div class="dependency-chain"><span>Schengen</span><i>→</i><span>挪威 12 月</span><i>→</i><span>法国 4 月</span></div>
+      </div>
+    </section>
+
+    <section class="section sources-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">OFFICIAL LINKS</p>
+          <h2>常用入口</h2>
+        </div>
+      </div>
+      <div id="sourceLinks" class="source-links"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>MY STUFF · PRIVATE PLANNING SYSTEM</span>
+    <span>Local status & notes are saved in this browser.</span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
